@@ -173,6 +173,7 @@ Claude Desktop stores these securely in the OS keychain; set them once in the ex
    export USER_GOOGLE_EMAIL=your.email@gmail.com  # Optional: Default email for auth - use this for single user setups and you won't need to set your email in system prompt for magic auth
    export GOOGLE_PSE_API_KEY=your-custom-search-api-key  # Optional: Only needed for Google Custom Search tools
    export GOOGLE_PSE_ENGINE_ID=your-search-engine-id  # Optional: Only needed for Google Custom Search tools
+   export CUSTOM_CA_BUNDLE=/path/to/ca-bundle.pem  # Optional: Custom CA bundle for SSL verification (see SSL_CONFIGURATION.md)
    ```
 
 3. **Server Configuration**:
