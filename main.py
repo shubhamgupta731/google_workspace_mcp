@@ -4,6 +4,10 @@ import os
 import sys
 from importlib import metadata
 
+# Import and apply SSL patch early, before any Google API imports
+from auth.ssl_patch import apply_ssl_patch
+apply_ssl_patch()
+
 # Local imports
 from core.server import server, set_transport_mode
 from core.utils import check_credentials_directory_permissions

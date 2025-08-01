@@ -9,6 +9,12 @@ import os
 from datetime import datetime
 from typing import List, Optional, Tuple, Dict, Any
 
+# Import SSL patch module early to patch httplib2 before Google APIs use it
+from auth.ssl_patch import apply_ssl_patch
+
+# Apply SSL patch if configured
+apply_ssl_patch()
+
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow
 from google.auth.transport.requests import Request
