@@ -12,11 +12,7 @@ from typing import Dict, Any, List
 import datetime
 
 # Import the calendar tools
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from gcalendar.calendar_tools import (
+from ..calendar_tools import (
     get_event,
     get_events,
     create_event,
